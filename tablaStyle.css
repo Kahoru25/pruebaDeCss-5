@@ -1,0 +1,32 @@
+.titulo{
+    text-align: center;
+    font-size: 25px;
+}
+.tablenomina{
+    margin: auto;
+    width: 90%;
+    height: 80%;
+    border: solid black;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 15px;
+}
+.columna1{
+    position: relative;
+}
+.alltr, .alltd{
+    border: solid black 2px;
+
+}
+.alltr:hover{
+    background-color: white;
+}
+.columna{
+    background-color: rgb(179, 179, 179);
+}
+.alltr:hover{
+    border: solid black
+}
+.columna .alltd, .columna{
+    border: solid black;
+}

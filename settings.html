@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link href="./style.css" rel="stylesheet">
+    <link href="./tablaStyle.css" rel="stylesheet">
+    <link rel="icon" href="./img/icon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script type="teXt/javascript">
+      function desplegar(tabla_a_desplegar,estadoT) {
+      var tablA = document.getElementById(tabla_a_desplegar);
+      var estadOt = document.getElementById(estadoT);
+      
+        switch(tablA.style.display) {
+        case "none":
+        tablA.style.display = "block";
+        estadOt.innerHTML = "Ocultar tabla"
+        break;
+          default:
+          tablA.style.display = "none";
+          estadOt.innerHTML = "Mostrar tabla"
+          break;
+      }
+      }
+      </script> 
+  </head>
+<body>
+  <header class="py-3 mb-3 border-bottom bg-dark" >
+    <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+      <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-light text-decoration-none">
+        <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+      </a>
+  
+      <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="./index.html" class="nav-link px-2 link-light">PRODUTOS</a></li>
+        <li><a href="./QuienesSomos.html" class="nav-link px-2 link-light">QUIENES SOMOS</a></li>
+        <li><a href="./contacto.html" class="nav-link px-2 link-light">CONTACTO</a></li>
+      </ul>
+      
+      <div class="dropdown text-end" style="right: 9%;">
+          <a href="#" class="d-block link-dark text-decoration-none dropdown-toggle" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false" class="dropbtn">
+            <img src="./img/Dtafalonso-Android-L-Settings-L.ico" alt="mdo" width="32" height="32" class="rounded-circle">
+          </a>
+        <ul class="dropdown-menu text-small dropdown-content" aria-labelledby="dropdownUser1">
+          <li><a class="dropdown-item" href="./settings.html">Administrador</a></li>
+          <li><a class="dropdown-item" href="./editar.html">Editar</a></li>
+          <li><hr class="dropdown-divider"></li>
+          <li><a class="dropdown-item" href="./producto.html">Salir</a></li>
+        </ul>
+      </div>
+    </div>
+    
+  </header>
+
+
+
+  <h2 class="text-center" style="padding-bottom: 50px;">Configuraciones de Administrador</h2>
+<div class="container-sm">
+  <table style="width:80%;" class="text-center container-sm">
+    <tr class="alltr">
+    <td onClick="desplegar('tabla_a_desplegar','estadoT')" class="container-sm">Nomina</td>
+    </tr>
+    <tr class="alltr">
+    <td>
+    <table id="tabla_a_desplegar" style="display: none;">
+    <tr class="alltr">
+    <td><div>
+      <table class="tablenomina" style="margin-left:10%;">
+          <div class="columna1">
+              <tr class="columna" class="alltr">
+                  <td class="alltd">Area</td>
+                  <td  class="alltd"  colspan="2">Nombre Completo</td>
+                  <td class="alltd" >ID</td>
+                  <td class="alltd" >Cargo</td>
+                  <td class="alltd" >Salario</td>
+                  <td class="alltd" >Deducciones</td>
+                  <td class="alltd" >Total Devengado</td>
+              </tr>
+              <tr class="alltr">
+                  <td rowspan="3" class="columna">Sistemas </td>
+                  <div class="normal">
+                      <td class="alltd" >Alvaro</td>
+                      <td class="alltd" >Diaz</td>
+                      <td class="alltd" >1010212102</td>
+                      <td class="alltd" >Desarrollador</td>
+                      <td class="alltd" >3'200 000</td>
+                      <td class="alltd" >$380 000</td>
+                      <td class="alltd" >1'820 000</td>
+                  </div>
+
+              </tr>
+              <tr class="alltr">
+                  <div class="normal">
+                      <td class="alltd" >Sara Valentina</td>
+                      <td class="alltd" >Mora Moralitos</td>
+                      <td class="alltd" >1820917622</td>
+                      <td class="alltd" >Analista</td>
+                      <td class="alltd" >1'800 000</td>
+                      <td class="alltd" >$240 000</td>
+                      <td class="alltd" >2'390 000</td>
+                  </div>
+              </tr>
+              <tr class="alltr">
+                  <div class="normal">
+                      <td class="alltd" >Santigo</td>
+                      <td class="alltd" >Barcelono</td>
+                      <td class="alltd" >8342873642</td>
+                      <td class="alltd" >Analista</td>
+                      <td class="alltd" >2'100 000</td>
+                      <td class="alltd" >$540 000</td>
+                      <td class="alltd" >1'390 000</td>
+                  </div>
+              </tr>
+              <tr class="alltr">
+                  <div class="normal">
+                      <td class="alltd"  class="columna" rowspan="2" style="background-color: rgb(179, 179, 179);">Finanzas</td>
+                      <td class="alltd" >Ana Maria</td>
+                      <td class="alltd" >Corredora Lozano</td>
+                      <td class="alltd" >7423974679</td>
+                      <td class="alltd" >Gerente de Finanzas</td>
+                      <td class="alltd" >1'800 000</td>
+                      <td class="alltd" >$220 000</td>
+                      <td class="alltd" >5'190 000</td>
+                  </div>
+              </tr>
+              <tr class="alltr">
+                  <div class="normal">
+                      <td class="alltd" >Jose Antonio</td>
+                      <td class="alltd" >Perez Quintero</td>
+                      <td class="alltd" >6640139811</td>
+                      <td class="alltd" >Asistente de finanzas</td>
+                      <td class="alltd" >3'100 000</td>
+                      <td class="alltd" >$193 000</td>
+                      <td class="alltd" >3'140 000</td>
+                  </div>
+
+              </tr>
+              <tr class="alltr">
+                  <td class="columna" rowspan="2">RR HH</td>
+                  <div class="normal">
+                      <td class="alltd" >Jean</td>
+                      <td class="alltd" >Quintero</td>
+                      <td class="alltd" >9878192739</td>
+                      <td class="alltd" >Asistente de RR HH</td>
+                      <td class="alltd" >3'100 000</td>
+                      <td class="alltd" >$193 000</td>
+                      <td class="alltd" >3'140 000</td>
+                  </div>
+
+              </tr>
+              <tr class="alltr">
+                  <div class="normal">
+                      <td class="alltd" >Minerva</td>
+                      <td class="alltd" >Pulguita</td>
+                      <td class="alltd" >6558123123</td>
+                      <td class="alltd" >Asistente de RR HH</td>
+                      <td class="alltd" >3'100 000</td>
+                      <td class="alltd" >$193 000</td>
+                      <td class="alltd" >3'140 000</td>
+                  </div>
+              </tr>
+              <tr class="alltr">
+                  <td class="columna" >SEGURIDAD</td>
+                  <div class="normal">
+                      <td class="alltd" >Cincuenta</td>
+                      <td class="alltd" >De Joselito</td>
+                      <td class="alltd" >4567123445</td>
+                      <td class="alltd" >Guarda de seguridad</td>
+                      <td class="alltd" >3'100 000</td>
+                      <td class="alltd" >$193 000</td>
+                      <td class="alltd" >3'140 000</td>
+                  </div>
+              </tr>
+              
+          </div>
+          </div>
+        </table>
+        <button type="button" class="btn btn-sm btn-outline-primary fa-solid fa-file-pen"> Editar </button>
+      </table>
+  </table>
+  <div class="text-center">
+    <div id="estadoT">clic para ver contenido</div>   
+    <div id="estadoT2"></div> 
+  </div>
+  
+</div>
+
+
+<div class="container-sm" style="padding-top: 50px;">
+
+  <table  style="width:45%;" class="text-center container-sm">
+    <tr class="alltr">
+    <td onClick="desplegar('tabla_a_desplegar1','estadoT1')" class="container-sm">Inventario</td>
+    </tr>
+    <tr class="alltr">
+    <td>
+    <table  id="tabla_a_desplegar1" style="display: none;">
+    <tr class="alltr">
+    <td><div>
+      <table class="tablenomina" style="margin-left:10%;">
+          <div class="columna1">
+              <tr class="columna" class="alltr">
+                  <td class="alltd">Nombre Pc</td>
+                  <td  class="alltd">Version</td>
+                  <td class="alltd" >ID</td>
+                  <td class="alltd" >Valor</td>
+                  <td class="alltd"> Inventario</td>
+              </tr>
+              <tr class="alltr">
+                  <td rowspan="3" class="columna">Asus TUF</td>
+                  <tr class="normal">
+                      <td class="alltd" >TUF VR READY</td>
+                      <td class="alltd" >12893873</td>
+                      <td class="alltd" >4'500 000</td>
+                      <td class="alltd" >15</td>
+                  </tr>
+  
+                  <tr class="alltr">
+                  
+                    <tr class="normal">
+                      <td  class="columna">Asus ROG</td>
+                      <td class="alltd" >Strix G17</td>
+                      <td class="alltd" >8734872</td>
+                      <td class="alltd" >5'100 000</td>
+                      <td class="alltd" >9</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">MSI Pulse</td>
+                      <td class="alltd" >GL66</td>
+                      <td class="alltd" >342556</td>
+                      <td class="alltd" >3'699 000</td>
+                      <td class="alltd" >6</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">Daysky</td>
+                      <td class="alltd" >Portatil</td>
+                      <td class="alltd" >234651</td>
+                      <td class="alltd" >2'090 000</td>
+                      <td class="alltd" >3</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    
+                    <tr class="normal">
+                      <td  class="columna">Lenovo</td>
+                      <td class="alltd" >Ideapad Gaming 3</td>
+                      <td class="alltd" >454678</td>
+                      <td class="alltd" >2'340 000</td>
+                      <td class="alltd" >3</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">Lenovo</td>
+                      <td class="alltd" >Dash</td>
+                      <td class="alltd" >245734</td>
+                      <td class="alltd" >4'300 000</td>
+                      <td class="alltd" >5</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">Levovo</td>
+                      <td class="alltd" >Flex 5</td>
+                      <td class="alltd" >234643</td>
+                      <td class="alltd" >3'132 000</td>
+                      <td class="alltd" >6</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">Asus ROG</td>
+                      <td class="alltd" >Strix G15</td>
+                      <td class="alltd" >8875343</td>
+                      <td class="alltd" >6'144 000</td>
+                      <td class="alltd" >13</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td  class="columna">Asus ROG</td>
+                      <td class="alltd" >Zephyrus Duo</td>
+                      <td class="alltd" >112444123</td>
+                      <td class="alltd" >8'300 000</td>
+                      <td class="alltd" >8</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td class="columna">Skytech</td>
+                      <td class="alltd" >Shadow PC</td>
+                      <td class="alltd" >4563134</td>
+                      <td class="alltd" >4'200 000</td>
+                      <td class="alltd" >5</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td class="columna">Asus ROG</td>
+                        <td class="alltd" >G35CZ</td>
+                        <td class="alltd" >3456745</td>
+                        <td class="alltd" >6'200 000</td>
+                        <td class="alltd" >4</td>
+                    </tr>
+                  </tr>
+                  <tr class="alltr">
+                    <tr class="normal">
+                      <td class="columna">MSI AEGIS</td>
+                      <td class="alltd" >RS 12TD-260</td>
+                      <td class="alltd" >1553135</td>
+                      <td class="alltd" >9'200 000</td>
+                      <td class="alltd" >3</td>
+                    </tr>
+                  </tr>
+            </div>
+  
+              
+              
+          </div>
+          </div>
+        </table>
+        <button type="button" class="btn btn-sm btn-outline-primary fa-solid fa-file-pen"> Editar </button>
+      </table>
+  </table>
+  <div class="text-center">
+    <div id="estadoT1">clic para ver contenido</div>   
+    <div id="estadoT3"></div> 
+
+</div>
+
+
+</body>
+</html>
